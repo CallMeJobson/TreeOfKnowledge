@@ -11,6 +11,9 @@ adding JavaScript to allow modal to be hidden
 used JS to add a display of none
 
 
+have a parent element then inside of the parent element should be the modal
+
+
 
 
 

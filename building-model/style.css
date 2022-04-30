@@ -1,0 +1,22 @@
+
+
+
+html, body {
+ margin: 0;
+ padding: 50px;
+ font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+
+
+#open-modal, #close-modal {
+    background-color: royalblue;
+    cursor: pointer;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}

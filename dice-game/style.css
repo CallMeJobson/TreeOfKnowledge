@@ -65,7 +65,7 @@ button {
 button:focus {
     outline: none;
 }
-
+/* Hides the reset button */
 #resetBtn {
     display: none;
 }

@@ -18,20 +18,26 @@ const message = document.getElementById('message')
 // add event listener to roll button
 rollBtn.addEventListener('click', () => {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1
-    if(player1Turn) {
-        //console.log(`player One rolled ${randomNumber1}`)
+    if(player1Turn) { 
+        // update player1 dice
+        player2Dice.classList.remove('active')
+        player1Dice.classList.add('active')
+        
         player1Score += randomNumber1
         message.innerHTML = `Player One's Turn`
         player1Scoreboard.innerHTML = player1Score
 
     }else{
-        message.innerHTML = `Player Two's Turn`
-        player2Score += randomNumber1
+       // update player2 dice
+       player1Dice.classList.remove('active')
+       player2Dice.classList.add('active')
 
-        console.log(`player Two rolled ${randomNumber1}`)
-        player2Scoreboard.innerHTML = player2Score
+       player2Score += randomNumber1
+       message.innerHTML = `Player Two's Turn`
+       player2Scoreboard.innerHTML = player2Score
         
     }
+    
     // toggle player1Turn
     player1Turn = !player1Turn 
 })

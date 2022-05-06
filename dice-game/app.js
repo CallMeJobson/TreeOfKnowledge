@@ -20,11 +20,11 @@ rollBtn.addEventListener('click', () => {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1
     if(player1Turn) {
         console.log(`player One rolled ${randomNumber1}`)
-        player1Turn = false
     }else{
         console.log(`player Two rolled ${randomNumber1}`)
-        player1Turn = true
     }
+    // toggle player1Turn
+    player1Turn = !player1Turn 
 })
 
 

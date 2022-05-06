@@ -19,9 +19,18 @@ const message = document.getElementById('message')
 rollBtn.addEventListener('click', () => {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1
     if(player1Turn) {
-        console.log(`player One rolled ${randomNumber1}`)
+        //console.log(`player One rolled ${randomNumber1}`)
+        player1Score += randomNumber1
+        message.innerHTML = `Player One's Turn`
+        player1Scoreboard.innerHTML = player1Score
+
     }else{
+        message.innerHTML = `Player Two's Turn`
+        player2Score += randomNumber1
+
         console.log(`player Two rolled ${randomNumber1}`)
+        player2Scoreboard.innerHTML = player2Score
+        
     }
     // toggle player1Turn
     player1Turn = !player1Turn 

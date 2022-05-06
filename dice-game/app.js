@@ -24,6 +24,7 @@ rollBtn.addEventListener('click', () => {
         player1Dice.classList.add('active')
         
         player1Score += randomNumber1
+        player1Dice.textContent = randomNumber1
         message.innerHTML = `Player One's Turn`
         player1Scoreboard.innerHTML = player1Score
 
@@ -33,11 +34,12 @@ rollBtn.addEventListener('click', () => {
        player2Dice.classList.add('active')
 
        player2Score += randomNumber1
+       player2Dice.textContent = randomNumber1
        message.innerHTML = `Player Two's Turn`
        player2Scoreboard.innerHTML = player2Score
         
     }
-    
+
     // toggle player1Turn
     player1Turn = !player1Turn 
 })

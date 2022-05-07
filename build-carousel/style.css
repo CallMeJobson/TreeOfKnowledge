@@ -12,6 +12,7 @@
 /* Descendant Combinator */
 .carousel .carousel-item-visible {
  display: block;
+ animation: fadeVisibility 0.5s;
 }
 
 
@@ -53,5 +54,19 @@
   margin-right: 20px;
 }
 
+@keyframes fadeVisibility {
+  0% {
+      opacity: 0;
+  }
+  25% {
+      opacity: .25;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
 

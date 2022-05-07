@@ -59,13 +59,16 @@ rollBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     player1Score = 0
     player2Score = 0
-    player1Scoreboard.innerHTML = player1Score
-    player2Scoreboard.innerHTML = player2Score
-    player1Dice.textContent = 0 
-    player2Dice.textContent = 0
+    player1Scoreboard.textContent = player1Score
+    player2Scoreboard.textContent = player2Score
+    player1Dice.textContent = '-'
+    player2Dice.textContent = '-'
     resetBtn.style.display = 'none'
     rollBtn.style.display = 'block'
-    message.innerHTML = `Let's Play!`
+    message.innerHTML = `Player One's Turn`
+    player1Dice.classList.add('active')
+    player2Dice.classList.remove('active')
+    player1Turn = true
 }
 )
 

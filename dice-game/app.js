@@ -46,7 +46,7 @@ rollBtn.addEventListener('click', () => {
     if(player1Score >= 20 ) {
         message.innerHTML = `Player One Wins!🥳`
         showDisplayButton()
-        
+
     }else if(player2Score >= 20 ) {
         message.innerHTML = `Player Two Wins!🎉`
         showDisplayButton()
@@ -55,5 +55,19 @@ rollBtn.addEventListener('click', () => {
     // toggle player1Turn
     player1Turn = !player1Turn 
 })
+
+resetBtn.addEventListener('click', () => {
+    player1Score = 0
+    player2Score = 0
+    player1Scoreboard.innerHTML = player1Score
+    player2Scoreboard.innerHTML = player2Score
+    player1Dice.textContent = 0 
+    player2Dice.textContent = 0
+    resetBtn.style.display = 'none'
+    rollBtn.style.display = 'block'
+    message.innerHTML = `Let's Play!`
+}
+)
+
 
 

@@ -13,7 +13,10 @@ const rollBtn = document.getElementById('rollBtn')
 const resetBtn = document.getElementById('resetBtn')
 const message = document.getElementById('message')
 
-
+function showDisplayButton(){
+    rollBtn.style.display = 'none'
+    resetBtn.style.display = 'block'
+}
 
 // add event listener to roll button
 rollBtn.addEventListener('click', () => {
@@ -41,13 +44,12 @@ rollBtn.addEventListener('click', () => {
     }
     
     if(player1Score >= 20 ) {
-        message.innerHTML = `Player One Wins! 🥳`
-        rollBtn.style.display = 'none'
-        resetBtn.style.display = 'block'
+        message.innerHTML = `Player One Wins!🥳`
+        showDisplayButton()
+        
     }else if(player2Score >= 20 ) {
-        message.innerHTML = `Player Two Wins! 🎉`
-        rollBtn.style.display = 'none'
-        resetBtn.style.display = 'block'
+        message.innerHTML = `Player Two Wins!🎉`
+        showDisplayButton()
     }
 
     // toggle player1Turn

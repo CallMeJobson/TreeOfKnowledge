@@ -1,0 +1,9 @@
+h2 {
+  color: red;
+  border: 5px solid rgb(126, 0, 153);
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
